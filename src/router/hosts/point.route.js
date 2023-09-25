@@ -1,5 +1,5 @@
 const BaseRoute = require('../baseRoute');
-const pointCloudUrl = 'point-cloud';
+const pointCloudUrl = '/point-cloud';
 
 const coordinate2distance = require('../../service/coordinate2distance');
 const distance2color = require('../../service/distances2color');

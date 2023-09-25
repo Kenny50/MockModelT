@@ -1,7 +1,7 @@
 const path = require('path');
 const express = require('express');
 const { WebSocketServer } = require('ws');
-
+const installSocket = require('./router/installRoute')
 const PORT = 3000
 
 
@@ -25,7 +25,7 @@ const wss = new WebSocketServer({
     clientTracking: true,
     // perMessageDeflate: true
 });
-
+installSocket(wss)
 const gnssPath = path.join(basePath,'gnss_update');
 const odP = path.join(basePath, 'object_detection')
 const passengerPath = path.join(basePath, 'passenger_count')

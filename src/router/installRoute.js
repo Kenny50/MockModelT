@@ -1,5 +1,4 @@
-const routeHosts = require('./routeHosts').getHosts();
-const disUrl = require('./disconnectAfter3s/disconnectAfter3sRoute');
+const routeHosts = require('./routeHost').getHosts();
 const { v4: uuidv4 } = require('uuid');
 const enableRouteHeartBeat = require('./enableRouteHeartBeat');
 
@@ -53,12 +52,6 @@ function installSocket(wss) {
 
             enableRouteHeartBeat(ws, heartbeat);
             // an endpoint for checking reconnect function
-        } else if(path === disUrl){
-            ws.currentEndPoint = path;
-            ws.send('will close after 3 s')
-            setTimeout(() => {
-                ws.close();
-            }, 3000)
         } else {
             ws.close();
         }
