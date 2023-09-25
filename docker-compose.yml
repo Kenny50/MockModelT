@@ -1,0 +1,10 @@
+version: '3'
+services:
+
+  tnn-modelt:
+    container_name: mock-tnn-modelt
+    image: mock-tnn-modelt:latest
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "13000:3000"
