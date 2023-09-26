@@ -13,6 +13,8 @@
     "colormap": "^2.3.2",
     "express": "^4.18.2",
     "fs": "^0.0.1-security",
+    "protobufjs": "^7.2.5",
+    "rxjs": "^7.8.1",
     "uuid": "^9.0.1",
     "ws": "^8.14.2"
   }
